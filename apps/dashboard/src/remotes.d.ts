@@ -1,1 +1,1 @@
-declare module 'apps/login/Module';
+declare module 'login/Module';

@@ -1,8 +1,8 @@
 {
-  "name": "apps/login",
+  "name": "login",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "ng-shared-login",
+  "prefix": "login",
   "sourceRoot": "apps/login/src",
   "tags": [],
   "targets": {
@@ -55,15 +55,14 @@
     "serve": {
       "executor": "@nx/angular:webpack-dev-server",
       "options": {
-        "port": 4201,
         "publicHost": "http://localhost:4201"
       },
       "configurations": {
         "production": {
-          "browserTarget": "apps/login:build:production"
+          "browserTarget": "login:build:production"
         },
         "development": {
-          "browserTarget": "apps/login:build:development"
+          "browserTarget": "login:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -71,7 +70,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "apps/login:build"
+        "browserTarget": "login:build"
       }
     },
     "lint": {
@@ -99,16 +98,16 @@
       "executor": "@nx/web:file-server",
       "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "apps/login:build",
-        "port": 4201,
+        "buildTarget": "login:build",
         "watch": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "apps/login:build:development"
+          "buildTarget": "login:build:development",
+          "port": 4201
         },
         "production": {
-          "buildTarget": "apps/login:build:production"
+          "buildTarget": "login:build:production"
         }
       }
     }

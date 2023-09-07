@@ -1,5 +1,5 @@
 {
-  "name": "apps/login-e2e",
+  "name": "login-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/login-e2e/src",
   "projectType": "application",
@@ -13,10 +13,10 @@
       },
       "configurations": {
         "production": {
-          "devServerTarget": "apps/login:serve:production"
+          "devServerTarget": "login:serve:production"
         },
         "ci": {
-          "devServerTarget": "apps/login:serve-static"
+          "devServerTarget": "login:serve-static"
         }
       }
     },
@@ -29,5 +29,5 @@
     }
   },
   "tags": [],
-  "implicitDependencies": ["apps/login"]
+  "implicitDependencies": ["login"]
 }
